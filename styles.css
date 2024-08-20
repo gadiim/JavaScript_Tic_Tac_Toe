@@ -5,25 +5,30 @@
     --main-light-backgroundColor: white;
     --main-light-textColor: gray;
     --vin-color: tomato;
+    --play-button-width: 100px;
+    --play-button-height: 100px;
+    --nav-button-width: 100px;
+    --nav-button-height: 50px;
+    --nav-button-margin: 10px;
 }
 
 html,
 body {
-    height: 90vh;
+    height: 85vh;
     margin: 0;
     font-size: 40px;
     letter-spacing: .2rem;
     display: inline-block;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     text-align: center;
     box-sizing: border-box;
     font-family: 'Helvetica Neue', sans-serif;
 }
 
 button {
-    width: 100px;
-    height: 100px;
+    width: var(--play-button-width);
+    height: var(--play-button-height);
     font-size: 50px;
     /* color: var(--main-light-textColor); */
 }
@@ -34,7 +39,7 @@ nav {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 100;
+    z-index: 1;
     width: 20vw;
     height: auto;
     background-color: transparent;
@@ -42,11 +47,69 @@ nav {
     padding: 30px;
 }
 
-nav button {
-    width: 100px;
-    height: 50px;
+aside {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 20vw;
+    height: auto;
+    background-color: transparent;
+    align-items: start;
+    padding: 0px;
+    background-color: aqua;
+}
+
+aside table {
     font-size: medium;
-    margin: 10px;
+    margin: var(--nav-button-margin);
+    letter-spacing: 0;
+}
+
+nav button,
+#startMenu button {
+    width: var(--nav-button-width);
+    height: var(--nav-button-height);
+    font-size: medium;
+    margin: var(--nav-button-margin);
+}
+
+#startMenu #btnStartGame {
+    width: calc((var(--nav-button-width) * 2) + (var(--nav-button-margin) * 4));
+    height: var(--nav-button-height);
+}
+
+#startMenu {
+    height: 350px;
+    width: 350px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background-color: var(--main-dark-textColor);
+    border-radius: 5px;
+    justify-content: center;
+    align-content: center;
+    margin: var(--nav-button-margin);
+    text-align: center;
+    box-shadow: 0 0 10px 2px var(--button-dark-backgroundColor);
+    border: solid 1px var(--button-dark-backgroundColor);
+}
+
+#tutorialMenuDisplay {
+    width: auto;
+    height: 25px;
+    margin: -10px 0 -5px 0;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    font-size: small;
+    letter-spacing: 0;
+    text-wrap: balance;
 }
 
 .container {

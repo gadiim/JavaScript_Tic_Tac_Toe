@@ -11,6 +11,22 @@
 </head>
 
 <body>
+    <div id="startMenu">
+        <div id="adversaryContainer">
+            <button id="btnPlayerMode">vs player</button>
+            <button id="btnAiMode">vs AI</button>
+        </div>
+        <div id="sideContainer">
+            <button id="btnX">X</button>
+            <button id="btn0">0</button>
+        </div>
+        <hr>
+        <div id="tutorialMenuDisplay"></div>
+        <div id="applyContainer">
+            <!-- <button id="btnExitGame">exit</button> -->
+            <button id="btnStartGame">start</button>
+        </div>
+    </div>
     <div class="container">
         <p>TIC TAC TOE</p>
         <button id="btn1"></button>
@@ -22,14 +38,29 @@
         <button id="btn7"></button>
         <button id="btn8"></button>
         <button id="btn9"></button>
-        <p id="statusDisplay">X turn</p>
+        <p id="statusDisplay"></p>
     </div>
+    <aside>
+        <table id='tableScoreDisplay' width = "auto" cellpadding = "5">
+            <tr>
+              <td id="player1">player 1</td>
+              <td id="side1">X</td>
+              <td id="score1">0</td>
+            </tr>
+            <tr>
+                <td id="player2">player 2</td>
+                <td id="side2">0</td>
+                <td id="score2">0</td>
+              </tr>
+          </table>
+    </aside>
     <nav>
         <button id="btnDarkMode">dark mode</button>
         <button id="btnSoundMode">sound on</button>
         <button id="btnMusicMode">music on</button>
-        <button id="btnReset">reset</button>
-        <button id="btnNewGame" disabled>new game</button>
+        <button id="btnDifficultMode" disabled>difficult</button>
+        <button id="btnReset">restart</button>
+        <button id="btnNewGame" >new game</button>
         <button id="btnExitGame">exit</button>
     </nav>
     <script src="game.js"></script>
